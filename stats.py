@@ -10,3 +10,10 @@ def count_letters(text):
     else:
       letters[letter] = 1
   return letters
+
+def ordered_list(dict):
+  list = []
+  for item in dict:
+    list.append({"char": item, "num": dict[item]})
+  list.sort(key=lambda x: x["num"], reverse=True)
+  return list
